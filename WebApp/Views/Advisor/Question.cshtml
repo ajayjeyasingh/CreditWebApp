@@ -1,0 +1,78 @@
+﻿@model WebApp.ViewModels.QuestionViewModel
+
+@{
+    ViewBag.Title = "Advisor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="jumbo-header">
+    Please answer all the below questions
+</div>
+
+<div class="jumbotron jumbo-qs">
+
+    @using (Html.BeginForm("SaveData", "Advisor"))
+    {
+        <div class="jumbo-question">
+            @Model.Question.QuestionNumber.
+            @Model.Question.QuestionText
+        </div>
+
+        <div class="jumbo-options">
+
+            <div class="btn-group" data-toggle="buttons">
+
+                @{
+                    int count = 0;
+
+                    foreach (var option in Model.Question.Options)
+                    {
+                        if (count == 0)
+                        {
+                            <div class="jumbo-option selected">
+                                @option.OptionText
+
+                                <div class="jumbo-option-hidden">@option.OptionValue</div>
+                            </div>
+                                    Model.SelectedAnswer = option.OptionValue;
+                                    @Html.HiddenFor(m => m.SelectedAnswer)
+
+                            count++;
+                                }
+                                else
+                                {
+                            <div class="jumbo-option">
+                                @option.OptionText
+
+                                <div class="jumbo-option-hidden">@option.OptionValue</div>
+                            </div>
+                        }
+                    }
+                }
+
+                
+
+            </div>
+
+        </div>
+
+        @Html.HiddenFor(m => m.Question.QuestionNumber)
+
+
+        <div class="button-group">
+
+            @if (Model.Question.QuestionNumber == Model.NumberOfQuestions)
+            {
+                <input type="submit" name="direction" value="Submit" class="btn btn-warning next-button" />
+            }
+            else
+            {
+                <input type="submit" name="direction" value="Next" class="btn btn-warning next-button" />
+            }
+
+        </div>
+    }
+
+
+</div>
+

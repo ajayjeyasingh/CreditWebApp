@@ -1,0 +1,122 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family:"Open Sans", arial, helvetica;
+    background-color: #f7f7f7;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.navbar-header {
+    float: left;
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+}
+.navbar-brand {
+    float:none;
+    font-size: 25px;
+    font-weight:bold;
+}
+
+.footer {
+    text-align:center;
+}
+
+.jumbotron {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align:center;
+    color: white;
+    background-color: #003f5f;
+}
+.btn-warning {
+    background-color: #fd9621;
+}
+
+.navbar {
+    background-color: #ffffff;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #003f5f;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: #016496;
+}
+
+.jumbotron.jumbo-qs {
+    margin-top: 0px;
+    background-color: #ffffff;
+    border: 1px solid #003f5f;
+    border-radius: 0 0 6px 6px;
+    padding: 0px;
+}
+
+
+.jumbo-header {
+    margin-top: 100px;
+    height:auto;
+    padding: 10px;
+    border-radius: 6px 6px 0 0;
+    text-align:center;
+    color: white;
+    background-color: #003f5f;
+    font-size: 25px;
+    vertical-align: middle;
+}
+
+.jumbo-question {
+    color: #003f5f;
+    
+}
+
+.jumbo-option {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 3px 3px 3px 3px;
+    border: 1px solid #003f5f;
+    text-align:center;
+    color: gray;
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+
+.jumbo-option.selected {
+    border: 2px solid green;
+}
+
+.previous-button {
+    margin: 15px;
+    font-size: 20px;
+    width: 150px;
+
+}
+.next-button {
+    margin: 15px;
+    font-size: 20px;
+    width: 150px;
+}
+
+.jumbo-option-hidden {
+    display: none;
+}
